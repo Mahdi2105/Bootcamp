@@ -98,5 +98,6 @@ var gen3 = [
     },
   ];
   //Type Gen 1,2 or 3 and then the index to get the parents
-  console.log(gen2[3].childOf())
+  console.log(gen1[0].childOf())
   
+  module.exports = {gen1, gen2, gen3};
