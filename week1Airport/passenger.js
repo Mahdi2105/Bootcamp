@@ -1,14 +1,3 @@
-// CLass for bags
-class Bag {
-    
-    constructor(weight) {
-        this.weight = weight
-    }
-}
-
-const bag = new Bag(16)
-console.log(bag.weight) 
-
 // Class for passenger 
 class Passenger {
     constructor(name, passportNumber, seatNumber) {
@@ -30,4 +19,4 @@ bob.addBag(bobsCabinBag)
 bob.addBag(bobsHullBag)
 console.log(bob.bags) // [ Bag { weight: 9 }, Bag { weight: 23 } ]
 
-module.exports = {Passenger, Bag};
+module.exports = Passenger;

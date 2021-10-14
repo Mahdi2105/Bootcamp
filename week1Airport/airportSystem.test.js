@@ -1,8 +1,7 @@
-const {Passenger, Bag} = require ("./airport")
+const Bag = require ("./bag")
+const Passenger = require ("./passenger")
 
-throw new Error('bag must have a weight')
-
-describe("Airport bags", () => {
+describe("Bag tests", () => {
     test.skip("Check weight works", () => {
         expect( new Bag(8).weight).toBe(8)
     })
@@ -13,3 +12,5 @@ describe("Airport bags", () => {
         expect(() => new Bag()).toThrowError('bag must have a weight')
     })
 });
+
+throw new Error('bag must have a weight')
