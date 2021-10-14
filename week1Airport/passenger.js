@@ -1,4 +1,5 @@
 const Bag = require ("./bag")
+const Plane = require ("./plane")
 
 // Class for passenger 
 class Passenger {
@@ -7,6 +8,9 @@ class Passenger {
         this.passportNumber = passportNumber
         this.seatNumber = seatNumber
         this.bags = []
+    }
+    board(passenger) {
+        this.name.push(Plane.passenger)
     }
 
     addBag(bag) {

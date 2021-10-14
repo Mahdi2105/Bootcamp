@@ -6,18 +6,18 @@ class Bag {
         if (weight == undefined){
             throw new Error("Bag must have a weight")
         }
-        else if (weight > 25) {
+        /*else if (weight > 30) {
             throw new Error("Bag is over limit")
-        }
+        }*/
         else {
         this.weight = weight
         };
 
     }
     
-    /*OverLimit(limit) {
-        if (this.weight > 25) return true
-    }*/
+    isOverLimit(limit) {
+        return this.weight > 25 ? true : false
+    }
 }
 
 const bag = new Bag(12)

@@ -5,6 +5,7 @@ const Airport = require ("./airport");
 const CrewMember = require("./crewMember");
 
 // Bag Tests
+const overBag = new Bag(43);
 describe("Bag Tests", () => {
     test("Check weight works", () => {
         expect( new Bag(12).weight).toBe(12)
@@ -12,9 +13,12 @@ describe("Bag Tests", () => {
     test("Throw an error for no weight", () => {
         expect(() => new Bag()).toThrowError('Bag must have a weight')
     })
-    test("Throw an error for over limit", () => {
+    test('should return true or false', () => {
+        expect(overBag.isOverLimit()).toBe(true);
+      })
+    /*test("Throw an error for over limit", () => {
         expect(() => new Bag(45)).toThrowError("Bag is over limit")
-    })
+    })*/
 });
 
 // Passenger Tests
