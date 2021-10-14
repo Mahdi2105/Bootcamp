@@ -1,3 +1,5 @@
+const Bag = require ("./bag")
+
 // Class for passenger 
 class Passenger {
     constructor(name, passportNumber, seatNumber) {
@@ -12,7 +14,7 @@ class Passenger {
     }
 }
 
-const bob = new Passenger('Bob the Builder', "Passport123", "1A")
+const bob = new Passenger('Bob', "Passport1", "1A")
 const bobsCabinBag = new Bag(9)
 const bobsHullBag = new Bag(23)
 bob.addBag(bobsCabinBag)
