@@ -27,6 +27,7 @@ describe("Passenger Tests", () => {
         pass1 = new Passenger('Harry', "Passport2", "2A");
         const pass1Bag = new Bag(12);
         pass1.addBag(pass1Bag);
+        pass2 = new Passenger('Aaron', "Passport3", "3A");
     });
     test("Check bag weight", () => {
         expect(pass1.bags).toEqual([{"weight": 12}])
@@ -36,26 +37,37 @@ describe("Passenger Tests", () => {
     });
 });
 
-// Plane Tests
-describe("Plane Tests", () => {
-    beforeAll(() => {
-        plane2 = new Plane("Jet");
-        plane2.board("Josh")
-
-    });
-    test("Check plane type", () => {
-        expect(plane2.type).toEqual("Jet")
-    })
-});
-
 // Airport Tests
 describe("Airport Tests", () => {
     beforeAll(() => {
         airport2 = new Airport("Gatwick", "UK");
+        airport3 = new Airport("Manchester", "UK")
     });
     test("Check plane type", () => {
         expect(airport2.name).toEqual("Gatwick")
     })
+});
+
+// Plane Tests - This comes after airport because i need the airport
+// variables to run the tests in here
+describe("Plane Tests", () => {
+    beforeAll(() => {
+        plane2 = new Plane("Jet");
+        plane2.board(pass1.name)
+        plane2.board(pass2.name)
+        plane2.takeOff(airport2.name)
+        plane2.land(airport2.name)
+    });
+    test("Check plane type", () => {
+        expect(plane2.type).toEqual("Jet")
+    })
+    test("Check plane passenger type", () => {
+        expect(typeof plane2.passengers).toBe('object')
+    })
+    test("Check land type", () => {
+        expect(typeof plane2.lands).toBe('object')
+    })
+
 });
 
 // Crew Member Tests

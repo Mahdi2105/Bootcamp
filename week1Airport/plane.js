@@ -1,13 +1,19 @@
-const Passenger = require ("./passenger")
-
 class Plane {
     constructor(type) {
         this.type = type;
         this.passengers = []
+        this.lands = []
+        this.takesOff = []
     }
 
     board(passenger) {
         this.passengers.push(passenger)
+    }
+    takeOff(airport) {
+        this.takesOff.push(airport)
+    }
+    land(airport) {
+        this.lands.push(airport)
     }
 }
 
