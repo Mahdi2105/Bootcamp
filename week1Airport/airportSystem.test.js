@@ -46,9 +46,6 @@ describe("Plane Tests", () => {
     test("Check plane type", () => {
         expect(plane2.type).toEqual("Jet")
     })
-    test("Check plane passengers", () => {
-        expect(typeof plane2.passengers).toEqual('string')
-    })
 });
 
 // Airport Tests
