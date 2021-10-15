@@ -76,7 +76,7 @@ describe("Crew Member Tests", () => {
     test("Check crew member staff number", () => {
         expect(crew2.staffNumber).toEqual("002")
     })
-    test("Check crew member staff number", () => {
+    test("Check crew member bag weight", () => {
         expect(crew2.bags).toEqual([{"weight": 14}])
     })
 });

@@ -18,6 +18,7 @@ class Plane {
     land1(airport) {
         this.lands.push(airport)
     }
+    
 }
 
 const plane1 = new Plane("Airbus")
