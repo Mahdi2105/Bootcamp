@@ -2,7 +2,7 @@ const Bag = require ("./bag")
 const Passenger = require ("./passenger")
 const Plane = require ("./plane")
 const Airport = require ("./airport");
-const CrewMember = require("./crewMember");
+const CrewMember = require("./crewMember")
 
 // Bag Tests
 const overBag = new Bag(43);
@@ -49,8 +49,8 @@ describe("Airport Tests", () => {
 describe("Plane Tests", () => {
     beforeAll(() => {
         plane2 = new Plane("Jet");
-        plane2.board(pass1.name)
-        plane2.board(pass2.name)
+        plane2.passBoard(pass1.name)
+        plane2.passBoard(pass2.name)
         plane2.takeOff(Airport.airports[0])
         plane2.land1(Airport.airports[1])
     });

@@ -3,11 +3,14 @@ const Person = require ("./person")
 
 // Class for passenger 
 class Passenger extends Person {
+    static passengers = []
+
     constructor(name, passportNumber, seatNumber) {
         super(name)
         this.passportNumber = passportNumber
         this.seatNumber = seatNumber
         this.bags = []
+        this.constructor.passengers.push(this)
     }
 
     addBag(bag) {
