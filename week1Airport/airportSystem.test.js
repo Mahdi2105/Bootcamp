@@ -39,10 +39,15 @@ describe("Passenger Tests", () => {
 // Plane Tests
 describe("Plane Tests", () => {
     beforeAll(() => {
-        plane2 = new Plane("Jet", "Black");
+        plane2 = new Plane("Jet");
+        plane2.board("Josh")
+
     });
     test("Check plane type", () => {
         expect(plane2.type).toEqual("Jet")
+    })
+    test("Check plane passengers", () => {
+        expect(typeof plane2.passengers).toEqual('string')
     })
 });
 

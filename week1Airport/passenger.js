@@ -9,9 +9,6 @@ class Passenger {
         this.seatNumber = seatNumber
         this.bags = []
     }
-    board(passenger) {
-        this.name.push(Plane.passenger)
-    }
 
     addBag(bag) {
         this.bags.push(bag)

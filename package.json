@@ -1,5 +1,23 @@
 {
-    "scripts": {
-      "test": "jest"
-    }
-  }
+  "scripts": {
+    "test": "jest"
+  },
+  "name": "bootcamp",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^27.2.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahdi2105/Bootcamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahdi2105/Bootcamp/issues"
+  },
+  "homepage": "https://github.com/Mahdi2105/Bootcamp#readme"
+}
