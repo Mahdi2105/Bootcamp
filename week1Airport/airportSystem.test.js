@@ -39,12 +39,8 @@ describe("Passenger Tests", () => {
 
 // Airport Tests
 describe("Airport Tests", () => {
-    beforeAll(() => {
-        airport2 = new Airport("Gatwick", "UK");
-        airport3 = new Airport("Manchester", "UK")
-    });
     test("Check plane type", () => {
-        expect(airport2.name).toEqual("Gatwick")
+        expect(Airport.airports[1].name).toEqual("Gatwick")
     })
 });
 
@@ -55,8 +51,8 @@ describe("Plane Tests", () => {
         plane2 = new Plane("Jet");
         plane2.board(pass1.name)
         plane2.board(pass2.name)
-        plane2.takeOff(airport2.name)
-        plane2.land(airport2.name)
+        plane2.takeOff(Airport.airports[0])
+        plane2.land1(Airport.airports[1])
     });
     test("Check plane type", () => {
         expect(plane2.type).toEqual("Jet")
