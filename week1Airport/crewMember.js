@@ -1,9 +1,10 @@
 const Bag = require ("./bag")
+const Person = require ("./person")
 
 // Class for passenger 
-class CrewMember {
+class CrewMember extends Person {
     constructor(name, position, staffNumber) {
-        this.name = name
+        super(name)
         this.position = position
         this.staffNumber = staffNumber
         this.bags = []
