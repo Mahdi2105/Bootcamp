@@ -1,10 +1,24 @@
 class Airport {
-    constructor(name, location) {
-        this.name = name;
-        this.location = location;
+    static airports = []
+    
+    constructor(name) {
+        this.name = name
+        this.planes = []
+        this.constructor.airports.push(this)
+    }
+    
+    fly(plane) {
+        this.planes.push(plane)
+
     }
 }
 
-const airport1 = new Airport("Heathrow", "UK")
+const airport1 = new Airport("Heathrow")
+const airport2 = new Airport("Gatwick");
+const airport3 = new Airport("Manchester")
 
 module.exports = Airport;
+
+
+
+console.log(Airport.airports);
