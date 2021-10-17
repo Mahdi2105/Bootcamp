@@ -37,6 +37,6 @@ plane0.passBoard("Luke")
 plane0.crewBoard("Hasan")
 
 //console.log(plane1.passengers);
-console.log(Plane.planes[0]);
+console.log(Plane.planes);
 
 module.exports = Plane;
