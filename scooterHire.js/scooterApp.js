@@ -20,25 +20,21 @@ scooter3 = new Scooter ("Scooter03", "Mile End", "Broken", 100)
 scooter4 = new Scooter ("Scooter04", "Mile End", "Fixed", 100)
 scooter5 = new Scooter ("Scooter05", "Whitechapel", "Broken", 40)
 
-class ScooterApp {
+/*class ScooterApp {
+
+    static rents = []
 
     constructor (userName, scooterName) {
         this.userName = userName
         this.scooterName = scooterName
+        this.constructor.rents.push(this)
     }
 
-    hire (hiredScooter) {
-        if (hiredScooter.available === false) {
-            console.log("error")
-        }
-        else {
-            this.userName.push(user1.name)
-            this.scooterName.push(hiredScooter.scooterID)
-        }
-    }
-
+}*/
+function hire(user) {
+    
 }
 
-user1.hire(scooter1)
+scooter1.hire(user1)
 
 console.log(scooter1)

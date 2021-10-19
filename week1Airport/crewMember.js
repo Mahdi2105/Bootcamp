@@ -1,5 +1,6 @@
 const Bag = require ("./bag")
 const Person = require ("./person")
+const Passenger = require ("./passenger")
 
 // Class for passenger 
 class CrewMember extends Person {
