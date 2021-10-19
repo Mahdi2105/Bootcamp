@@ -4,10 +4,13 @@ const Person = require ("./person")
 class User extends Person {
     static users = []
 
-    constructor(name, age, money) {
+    constructor(name, age, balance) {
         super(name, age)
-        this.money = money;
+        this.balance = balance;
+        this.constructor.users.push(this)
     }
 }
+
+console.log(User.users)
 
 module.exports =  User;

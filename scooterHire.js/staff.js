@@ -6,7 +6,10 @@ class Staff extends Person {
 
     constructor(name, age) {
         super(name, age)
+        this.constructor.staff1.push(this)
     }
 }
+
+//console.log(Staff.staff1)
 
 module.exports = Staff;
