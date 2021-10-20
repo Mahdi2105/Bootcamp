@@ -1,6 +1,6 @@
-const User = require ("../src/user")
-const Scooter = require ("../src/scooter")
-const ScooterHire = require ("../src/scooterHire")
+const User = require ("./src/user")
+const Scooter = require ("./src/scooter")
+const ScooterHire = require ("./src/scooterHire")
 
 // User Tests
 describe("User Tests", () => {
@@ -21,4 +21,3 @@ describe("Scooter Tests", () => {
         expect(Scooter.scooters[1].available).toBe(false)
     })
 });
-console.log(User.users)

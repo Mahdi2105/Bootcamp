@@ -1,5 +1,5 @@
 const User = require ("./user")
-const Scooter = require ("../scooter")
+const Scooter = require ("./scooter")
 const ScooterHire = require ("./scooterHire")
 
 user1 = new User ("James", 20, 150.00)
