@@ -1,6 +1,6 @@
 const User = require ("./user")
-const Staff = require ("./staff")
 const Scooter = require ("./scooter")
+const ScooterHire = require ("./scooterApp")
 
 // User Tests
 describe("User Tests", () => {
