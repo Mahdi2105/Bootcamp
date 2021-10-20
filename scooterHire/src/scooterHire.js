@@ -3,16 +3,17 @@ class ScooterHire {
         this.scooterID = []
         this.hiredBy = []
     }
-    
+
     async hireScooter(scooter, user) {
         if (scooter.available == true) {
-        scooter.available = false
-        user.balance -= 5
-        this.scooterID.push(scooter.scooterID)
-        this.hiredBy.push(user.name)
-        scooter.station = "In use"
-        await new Promise(resolve => setTimeout(resolve, 4000));
-        console.log("Battery at 50%")
+            console.log("Thank you " + user.name + ", you have hired: " +  scooter.scooterID)
+            scooter.available = false
+            user.balance -= 5
+            this.scooterID.push(scooter.scooterID)
+            this.hiredBy.push(user.name)
+            scooter.station = "In use"
+            await new Promise(resolve => setTimeout(resolve, 4000));
+            console.log("Battery at 70%")
         } 
         else if (scooter.condition == "broken") {
             this.fix(scooter)
@@ -42,10 +43,10 @@ class ScooterHire {
         this.charge(scooter)
     }
     
-    async reportBroken(scooter, station) {
+    async reportBroken(scooter/*, station*/) {
         scooter.condition = "Broken"
-        console.log("Thank you for reporting")
-        this.return(scooter, station)
+        console.log("Thank you for reporting, please return the bike to a station")
+        //this.return(scooter, station)
     }
 
     async return(scooter, station) {

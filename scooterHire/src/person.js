@@ -3,7 +3,7 @@ class Person {
     constructor(name,age) {
         this.name = name
         if (age < 18){
-            throw new Error("Must be 18 or overto hire and ride a scooter or to be a member of staff")
+            throw new Error("Must be 18 or overto hire and ride a scooter")
         }
         else {
         this.age = age 
