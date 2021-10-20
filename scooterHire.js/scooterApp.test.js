@@ -14,8 +14,8 @@ describe("User Tests", () => {
 
 // Scooter Tests
 describe("Scooter Tests", () => {
-    test("Check scooter locaion", () => {
-        expect(Scooter.scooters[1].location).toBe("Canary Wharf")
+    test("Check scooter station", () => {
+        expect(Scooter.scooters[1].station).toBe("Canary Wharf")
     })
     test("Check scooter availability", () => {
         expect(Scooter.scooters[1].available).toBe(false)
