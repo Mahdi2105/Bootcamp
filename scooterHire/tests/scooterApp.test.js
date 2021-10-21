@@ -15,6 +15,9 @@ describe("User Tests", () => {
     test("Check user's age is a number", () => {
         expect(typeof User.users[0].age).toBe("number")
     })
+    test("Check user's balance is a number", () => {
+        expect(typeof User.users[0].balance).toBe("number")
+    })
 });
 
 // Scooter Tests
@@ -26,10 +29,19 @@ describe("Scooter Tests", () => {
     test("Check scooter availability", () => {
         expect(Scooter.scooters[0].available).toBe(true)
     })
+    test("Check scooter battery", () => {
+        expect(Scooter.scooters[0].battery).toBe(100)
+    })
 });
 
 //Async tests 
-test("charge", async () => {
-    await hire1.charge(scooter1); // we need to wait for the charge!
-    console.log("Test complete");
-  });
+describe("Async Tests", () => {
+    test("Charge", async () => {
+        await hire1.charge(scooter1); // we need to wait for the charge!
+        console.log("Charge test complete");
+    })
+    test("Fix", async () => {
+        await hire1.fix(scooter1); // we need to wait for the charge!
+        console.log("Fix test complete");
+    })
+});

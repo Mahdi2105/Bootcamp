@@ -17,7 +17,6 @@ class Scooter{
         }
         this.constructor.scooters.push(this)
     }
-
 }
 
 console.log(Scooter.scooters)

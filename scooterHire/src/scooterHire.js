@@ -8,7 +8,6 @@ class ScooterHire {
         if (scooter.available == true) {
             console.log("Thank you " + user.name + ", you have hired: " +  scooter.scooterID)
             scooter.available = false
-            user.balance -= 5
             this.scooterID.push(scooter.scooterID)
             this.hiredBy.push(user.name)
             scooter.station = "In use"
@@ -49,8 +48,10 @@ class ScooterHire {
         //this.return(scooter, station)
     }
 
-    async return(scooter, station) {
+    async return(user, scooter, station) {
         scooter.station = station
+        user.balance -= 5
+        console.log("Thank you for reutrning the scooter, your new balance is: " + user.balance)
         if (scooter.condition == "Fixed") {
             this.charge(scooter)
         } else if (scooter.condition == "Broken") {
