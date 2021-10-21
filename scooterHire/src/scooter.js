@@ -21,5 +21,4 @@ class Scooter{
 
 console.log(Scooter.scooters)
 
-
 module.exports = Scooter;
