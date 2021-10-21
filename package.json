@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:report": "jest --coverage=true"
   },
   "name": "bootcamp",
   "description": "",

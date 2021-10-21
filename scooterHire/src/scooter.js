@@ -12,7 +12,7 @@ class Scooter{
         if (this.condition == "Fixed" && this.battery == 100) {
             this.available = true
         }
-        else if (this.condition == "Broken" || this.battery < 100) {
+        else if (this.condition == "Broken" || this.battery !== 100) {
             this.available = false
         }
         this.constructor.scooters.push(this)
