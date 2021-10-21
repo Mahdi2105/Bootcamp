@@ -41,7 +41,7 @@ describe("Async Tests", () => {
         console.log("Charge test complete");
     })
     test("Fix", async () => {
-        await hire1.fix(scooter1); // we need to wait for the charge!
+        await hire1.fix(scooter1); // we need to wait for the fix!
         console.log("Fix test complete");
     })
 });
