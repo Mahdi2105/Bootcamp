@@ -4,11 +4,12 @@ const User = require ("./user")
 class Scooter{
     static scooters = []
 
-    constructor(scooterID, station, condition, battery, available) {
+    constructor(scooterID, station, condition, battery,range, available) {
         this.scooterID = scooterID
         this.station = station
         this.condition = condition
         this.battery = battery
+        this.range = this.battery * 0.32
         if (this.condition == "Fixed" && this.battery == 100) {
             this.available = true
         }
