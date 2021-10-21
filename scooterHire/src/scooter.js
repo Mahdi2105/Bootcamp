@@ -19,7 +19,7 @@ class Scooter{
         this.constructor.scooters.push(this)
     }
 }
-
+scooter1 = new Scooter ("Scooter01", "Canary Wharf", "Fixed", 100)
 console.log(Scooter.scooters)
 
 module.exports = Scooter;
