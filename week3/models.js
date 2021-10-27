@@ -14,7 +14,7 @@ const restaurantModel = {
 };
 
 const menuModel = {
-  title: {
+  name: {
     type: Sequelize.STRING,
     allowNull: false,
   },
