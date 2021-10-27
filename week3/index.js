@@ -33,25 +33,39 @@ main().catch((e) => console.log(`Caught error: ${e}`));
  */
 async function createRows() {
   // create the objects (and rows!)
-  const theRestaurant = await Restaurant.create({
+  const pizzaRestaurant = await Restaurant.create({
     name: "Pizza Hut",
     imagelink: "http://domain.myimagelink.jpg",
   });
 
-  const theMenu = await Menu.create({
+  const drinkRestaurant = await Restaurant.create({
+    name: "Drinks4Us",
+    imagelink: "http://domain.myimagelink.jpg",
+  });
+
+  const pizzaMenu = await Menu.create({
     title: "Pizza menu",
   });
 
-  const theMenuItem = await MenuItem.create({
+  const drinkMenu = await Menu.create({
+    title: "Drink Menu",
+  });
+
+  const pizza = await MenuItem.create({
     name: "Pizza",
     price: 6.99,
   });
 
-  // add the associations (foreign keys) (these are sequelize specific functions)
-  await theRestaurant.addMenu(theMenu);
-  await theMenu.addMenuItem(theMenuItem);
+  const fanta = await MenuItem.create({
+    name: "Fanta",
+    price: 0.99,
+  });
 
-  return [theRestaurant];
+  // add the associations (foreign keys) (these are sequelize specific functions)
+  await pizzaRestaurant.addMenu(pizzaMenu);
+  await pizzaMenu.addMenuItem(pizza);
+
+  return [pizzaRestaurant];
 }
 
 /**
@@ -59,7 +73,7 @@ async function createRows() {
  * @param [] array of objects
  */
 async function runQueries(objects) {
-  [theRestaurant] = objects; // objects[0], objects[1], objects[2]
+  [pizzaRestaurant] = objects; // objects[0], objects[1], objects[2]
 
   const restaurants = await Restaurant.findAll({}); // get all restaurants
 
@@ -69,7 +83,7 @@ async function runQueries(objects) {
   // D = Restaurant.destroy()
 
   // get Menus that belong to a restaurant
-  const menus = await theRestaurant.getMenus();
+  const menus = await pizzaRestaurant.getMenus();
 
   // --> get menu items that belong to a menu here
   // --> write tests in jest to prove your restaurant CRUD functions work
