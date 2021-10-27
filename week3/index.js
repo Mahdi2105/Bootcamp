@@ -64,8 +64,10 @@ async function createRows() {
   // add the associations (foreign keys) (these are sequelize specific functions)
   await pizzaRestaurant.addMenu(pizzaMenu);
   await pizzaMenu.addMenuItem(pizza);
+  await drinkRestaurant.addMenu(drinkMenu);
+  await drinkMenu.addMenuItem(fanta)
 
-  return [pizzaRestaurant];
+  return [pizzaRestaurant, drinkRestaurant];
 }
 
 /**
