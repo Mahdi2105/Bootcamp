@@ -35,6 +35,22 @@ const {
       res.status(400).send(e.message);
     }
   });
+
+  app.get('/restaurant/:id', (request, response) => {
+    // mock fetch restaurant id from database
+    let obj = null;
+    if (request.params.id === '1') {
+      obj = "Pizza Hut";
+    } 
+    else if (request.params.id === '2') {
+      obj = "Drinks4Us";
+    }
+    else {
+      obj = 'Restaurant not found';
+    }
+  
+    response.send(obj);
+  });
   
   // 1. create an endpoint that will delete a restaurant by ID (HTTP Method = delete)
   
