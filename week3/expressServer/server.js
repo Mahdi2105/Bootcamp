@@ -40,13 +40,20 @@ app.get('/restaurant/:id', (request, response) => {
   response.send(obj);
 });
 
+app.get('/index.html', (request, response) => {
+  // mock fetch restaurant id from database
+  response.render("index");
+});
+
+app.post('/users', (request, response) => {
+  response.send(
+    `Hey ${request.body.username}!
+    <a href="/">Go back home</a>
+  `
+  );
+});
+
 // listen for connections on port 3001 - this starts the server
 app.listen(port, () => {
   console.log(`Server listening on port: ${port}`);
 });
-
-// app.get('/index.html', (request, response) => {
-//   // mock fetch restaurant id from database
-//   response.render("index");
-// });
-
