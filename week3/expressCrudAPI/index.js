@@ -28,7 +28,7 @@ const {
     try {
       // create a row in the database using sequelize create method
       const restaurants = await Restaurant.findAll({});
-  
+      
       // 200 = success
       res.status(200).send(restaurants);
     } catch (e) {
